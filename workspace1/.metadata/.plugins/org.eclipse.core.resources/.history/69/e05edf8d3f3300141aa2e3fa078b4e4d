@@ -1,0 +1,5 @@
+package it.gm.algorithm.sorting.basic;
+
+public class SelectionSort {
+
+}

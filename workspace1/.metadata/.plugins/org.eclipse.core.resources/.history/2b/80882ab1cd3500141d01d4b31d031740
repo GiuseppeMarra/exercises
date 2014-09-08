@@ -1,0 +1,9 @@
+package it.gm.datastructure.graphs.shortestpath.model;
+
+import it.gm.datastructure.graphs.core.model.Vertex;
+
+public class VertexSP extends Vertex {
+	
+	private
+
+}

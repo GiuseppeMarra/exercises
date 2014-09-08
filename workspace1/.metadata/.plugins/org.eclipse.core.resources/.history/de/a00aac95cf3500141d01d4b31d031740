@@ -1,0 +1,11 @@
+package it.gm.datastructure.graphs.simple.core.model;
+
+public class GraphException extends RuntimeException {
+	
+	
+	public GraphException( String name ) { 
+		super( name ); 
+		}
+	
+
+}

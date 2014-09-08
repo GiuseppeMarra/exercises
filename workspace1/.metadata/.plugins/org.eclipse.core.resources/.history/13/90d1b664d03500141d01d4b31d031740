@@ -1,0 +1,52 @@
+package it.gm.datastructure.graphs.simple.core.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Graph {
+	
+	public static final double INFINITY = Double.MAX_VALUE;
+	private Map<String,Vertex> vertexMap = new HashMap<String,Vertex>( );
+
+	public void addEdge(String sourceName, String destName, double cost) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	private Vertex getVertex(String vertexName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	public void printPath(String destName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void unweighted(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void dijkstra(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void negative(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void acyclic(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

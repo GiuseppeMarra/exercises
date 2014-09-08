@@ -1,0 +1,43 @@
+package it.gm.algorithm.sorting.basic;
+
+public class QuickSort {
+	
+	
+	public static int[] sort(int[] unsorted){
+		
+		quickSort(unsorted,0,unsorted.length-1);
+		return unsorted;
+	}
+	
+	private static void quickSort(int[] array, int from, int to) {
+		
+		if(to>from){
+			int q=partition(array, from, to);
+			quickSort(array,from,q-1);
+			quickSort(array,q+1,to);
+		}
+		
+	}
+
+	private static int partition(int[] array, int from, int to){
+		
+		int x = array[to];
+		int i=from-1;
+		for(int j=from; j<to;j++){
+			if(array[j]<=x){
+				i++;
+				int temp = array[i];
+				array[i]=array[j];
+				array[j]=temp;
+			}
+				
+		}
+		int temp = array[i+1];
+		array[i+1]=array[to];
+		array[to]=temp;
+		return i+1;
+		
+	}
+	
+
+}

@@ -1,0 +1,10 @@
+package it.gm.datastructure.graphs.model;
+
+import java.util.List;
+
+public class Vertex {
+	
+	public String name;  //vertex name
+	public List<Edge> adj;  //adjacency list
+
+}

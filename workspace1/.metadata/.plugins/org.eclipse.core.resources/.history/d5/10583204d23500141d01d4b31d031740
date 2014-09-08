@@ -1,0 +1,86 @@
+package it.gm.datastructure.graphs.simple.core.model;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Graph {
+	
+	public static final double INFINITY = Double.MAX_VALUE;
+	private Map<String,Vertex> vertexMap = new HashMap<String,Vertex>( );
+
+	
+	
+	private Vertex getVertex(String vertexName) {
+		
+		/**If vertexName is not present, add it to vertexMap.
+		 * In either case, return the correspondent Vertex.
+		 */
+		Vertex v= this.vertexMap.get(vertexName);
+		if(v==null){
+			v=new Vertex(vertexName);
+			vertexMap.put(vertexName, v);
+		}
+		
+		return v;
+
+	
+	}
+	
+	
+	public void addEdge(String sourceName, String destName, double cost) {
+
+		/**
+		 * Add a new Edge to the graph
+		 */
+		
+		Vertex source =this.vertexMap.get(sourceName);
+		Vertex dest = this.vertexMap.get(destName);
+		List<Edge> adj =source.getAdjacencyList();
+		adj.add(new Edge(dest, cost));
+		
+	}
+	
+	
+	private void clearAll(){
+		
+		for(Vertex v:this.vertexMap.values()){
+			v.reset();
+			
+		}
+	}
+
+	
+	
+
+	
+	public void printPath(String destName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void unweighted(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void dijkstra(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void negative(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	public void acyclic(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package it.gm.algorithm.sorting.advanced;
+
+public class InsertionSort {
+
+	/**
+	 * Simple insertion sort.
+	 * 
+	 * @param a
+	 *            an array of Comparable items.
+	 */
+	public static <AnyType extends Comparable<? super AnyType>> void insertionSort(AnyType[] a)
+
+	{
+		int i;
+		for (int p = 1; p < a.length; p++) {
+			AnyType tmp = a[p];
+			for (i = p; i > 0 && tmp.compareTo(a[i - 1]) < 0; i--)
+				a[i] = a[i - 1];
+			a[i] = tmp;
+		}
+	}
+
+}

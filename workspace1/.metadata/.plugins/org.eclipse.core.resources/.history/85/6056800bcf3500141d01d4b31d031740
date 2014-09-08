@@ -1,0 +1,13 @@
+package it.gm.datastructure.graphs.shortestpath.model;
+
+import java.util.List;
+
+import it.gm.datastructure.graphs.core.model.Edge;
+import it.gm.datastructure.graphs.core.model.Vertex;
+
+public class VertexSP extends Vertex {
+	
+
+	
+
+}

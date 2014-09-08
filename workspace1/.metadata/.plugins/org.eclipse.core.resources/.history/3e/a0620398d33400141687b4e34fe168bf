@@ -1,0 +1,45 @@
+package it.gm.algorithm.sorting.basic;
+
+public class Test {
+
+	
+	public static void main(String[] args){
+		
+		
+		int n = 10000000;
+		int[] unsorted = new int[n];
+		System.out.print("Non Ordinato: ");
+		for(int i=0; i<n;i++){
+			unsorted[i]= (int) (Math.random()*100000);
+			//System.out.print(unsorted[i]+", ");
+		}
+		System.out.println();
+		long init=System.currentTimeMillis();
+		
+		
+		int[] sorted=null;
+		
+		//theta(n^2)
+		//sorted = InsertionSort.sort(unsorted);
+		//sorted = SelectionSort.sort(unsorted);
+		//sorted = BubbleSort.sort(unsorted);
+		
+		//theta(nlogn)
+		//sorted = MergeSort.sort(unsorted);
+		sorted =QuickSort.sort(unsorted);
+
+		
+		
+		
+		long end =System.currentTimeMillis();
+		System.out.print("Ordinato: ");
+		//for(int i:sorted) System.out.print(i+", ");
+		System.out.println();
+		System.out.println("Tempo impiegato= "+ (end-init)+"ms");
+		
+	
+	}
+	
+	
+	
+}

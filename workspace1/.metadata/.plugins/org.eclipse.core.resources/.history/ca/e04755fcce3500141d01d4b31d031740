@@ -1,0 +1,32 @@
+package it.gm.datastructure.graphs.shortestpath.model;
+
+import java.util.List;
+
+import it.gm.datastructure.graphs.core.model.Edge;
+import it.gm.datastructure.graphs.core.model.Vertex;
+
+public class VertexSP extends Vertex {
+	
+	public VertexSP(String name, List<Edge> adj, double dist, Vertex prev) {
+		super(name, adj);
+		this.dist=dist;
+		this.prev=prev;
+	}
+	private double dist;
+	private Vertex prev;
+	public double getDist() {
+		return dist;
+	}
+	public void setDist(double dist) {
+		this.dist = dist;
+	}
+	public Vertex getPrev() {
+		return prev;
+	}
+	public void setPrev(Vertex prev) {
+		this.prev = prev;
+	}
+	
+	
+
+}

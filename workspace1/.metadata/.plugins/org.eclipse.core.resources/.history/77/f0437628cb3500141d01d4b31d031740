@@ -1,0 +1,5 @@
+package it.gm.datastructure.graphs.core;
+
+public class Edge {
+
+}

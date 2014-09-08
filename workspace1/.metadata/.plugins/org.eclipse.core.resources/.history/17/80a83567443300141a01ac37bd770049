@@ -1,0 +1,17 @@
+package it.gm.algorithm.sorting.basic;
+
+public class SelectionSort {
+	
+	
+	public static int[] sort (int[] unsorted){
+		
+		for(int i=0;i<unsorted.length-1;i++){
+			
+		}
+		
+		
+		return null;
+		
+	}
+
+}

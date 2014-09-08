@@ -1,0 +1,21 @@
+package it.gm.datastructure.graphs.simple.core.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public interface GraphI {
+	
+	
+	public void addEdge( String sourceName, String destName, double cost );
+
+    public Vertex getVertex( String vertexName );
+    
+    	public void printPath( String destName );
+    	public void unweighted( String startName );
+    	public void dijkstra( String startName ) ;
+    	public void negative( String startName );
+    	public void acyclic( String startName ) ;
+
+
+	
+}

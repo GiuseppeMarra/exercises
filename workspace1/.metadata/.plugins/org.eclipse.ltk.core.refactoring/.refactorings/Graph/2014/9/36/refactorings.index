@@ -1,0 +1,11 @@
+1410011644217	Rename package 'it.gm.datastructure.graphs.core'
+1410011659570	Rename package 'it.gm.datastructure.graphs.model'
+1410011667895	Rename package 'it.gm.datastructure.graphs.shortestpath'
+1410012000127	Rename type 'Graph'
+1410012327493	Encapsulate field 'scratch'
+1410012409546	Delete element
+1410012415501	Delete element
+1410012424628	Rename package 'it.gm.datastructure.graphs.core.model'
+1410012731643	Delete element
+1410013123853	Rename method 'getAdj'
+1410014712994	Delete elements

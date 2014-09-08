@@ -1,0 +1,13 @@
+package it.gm.datastructure.graphs.core.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class GraphI {
+	
+	private Map<String,Vertex> vertexMap = new HashMap<String,Vertex>( );
+	
+	public void addEdge( String sourceName, String destName, double cost ) { /* Figure 14.10 */ }
+
+	
+}

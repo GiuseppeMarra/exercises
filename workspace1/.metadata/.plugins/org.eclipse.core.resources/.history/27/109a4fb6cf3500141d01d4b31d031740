@@ -1,0 +1,53 @@
+package it.gm.datastructure.graphs.simple.core.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Graph implements GraphI {
+	
+	public static final double INFINITY = Double.MAX_VALUE;
+	private Map<String,Vertex> vertexMap = new HashMap<String,Vertex>( );
+
+	@Override
+	public void addEdge(String sourceName, String destName, double cost) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Vertex getVertex(String vertexName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void printPath(String destName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void unweighted(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dijkstra(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void negative(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void acyclic(String startName) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

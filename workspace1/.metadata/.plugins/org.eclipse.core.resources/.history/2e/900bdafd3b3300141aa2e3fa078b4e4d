@@ -1,0 +1,24 @@
+package it.gm.algorithm.sorting.basic;
+
+public class InsertionSort {
+	
+	
+	public static int[] sort (int[] unsorted){
+		
+		for (int j=1; j<unsorted.length-1; j++){
+			
+			int i= j-1;
+			while(i>0&&unsorted[j]<unsorted[i]){
+				int temp = unsorted[j];
+				unsorted[j]=unsorted[i];
+				unsorted[i]=temp;
+				i=i-1;				 
+			}
+			   
+		}
+		
+		
+		return unsorted;
+	}
+
+}
