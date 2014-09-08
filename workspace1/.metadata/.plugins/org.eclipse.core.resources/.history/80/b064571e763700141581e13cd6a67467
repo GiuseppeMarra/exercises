@@ -5,7 +5,7 @@ public class Test {
 	
 	public static void main(String[] args){
 		
-		//Prova per vedere se funziona github
+		
 		int n = 10000;
 		Integer[] unsorted = new Integer[n];
 		System.out.print("Non Ordinato: ");
