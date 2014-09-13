@@ -1,0 +1,36 @@
+
+public class DivideConquerApproach {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	
+	private int countInversions(int[] A, int from, int to){
+		
+		int mid=(to-from)/2;
+		
+		int leftInversions= 0;
+		int rightInversions = 0;
+		int splitInversions = 0;
+		
+		if(A.length>1){
+		leftInversions= countInversions(A,from,mid);
+		rightInversions = countInversions(A,mid+1,to);
+		splitInversions = countSplitInversions(A,from,to);
+		}
+		return leftInversions+rightInversions+splitInversions;
+		
+	}
+
+
+
+	private int countSplitInversions(int[] A, int from, int to) {
+		
+		int mid = (to-from)/2;
+		return 0;
+	}
+
+}

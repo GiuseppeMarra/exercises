@@ -1,0 +1,102 @@
+
+public class DivideConquerApproach {
+
+	public static void main(String[] args) {
+		
+		
+		int n = 8;
+		int[] A = new int[n];
+//		for(int i=0; i<n;i++){
+//			A[i]= (int) (Math.random()*100);
+//			System.out.print(A[i]+", ");
+//		}
+		
+		A[0]=3;
+		A[1]=1;
+		A[2]=7;
+	    A[3]=6;
+	    A[4]=2;
+	    A[5]=4;
+	    A[6]=5;
+	    A[7]=8;
+	    
+	    //2+0+4+3
+	    
+		for(int i:A) System.out.print(i+", ");
+
+	    System.out.println(countInversions(A, 0, A.length-1));
+
+	}
+	
+	
+	
+	private static int countInversions(int[] A, int from, int to){
+		
+		
+		int leftInversions= 0;
+		int rightInversions = 0;
+		int splitInversions = 0;
+		
+		int len=to-from+1;
+		if(len!=1){
+				int mid = len/2;
+		leftInversions= countInversions(A,from,from+mid-1);
+		rightInversions = countInversions(A,mid+from,to);
+		splitInversions = countSplitInversions(A,from, from+mid-1,to);
+		
+		System.out.println("Dim "+ mid*2+" ovvero from "+from+" to "+to+": "+leftInversions+", "+rightInversions+", "+splitInversions);
+		}
+		
+		return leftInversions+rightInversions+splitInversions;
+		
+	}
+
+
+
+	private static int countSplitInversions(int[] A, int from, int mid, int to) {
+		
+		
+		int count=0;
+
+		
+		Integer[] left = new Integer[mid-from+1];
+		for(int i=0; i<mid-from+1; i++){
+			left[i]=A[i+from];
+		}
+		
+		
+		Integer[] right = new Integer[to-mid];
+		for(int i=0; i<to-mid; i++){
+			right[i]=A[i+mid+1];
+		}
+		
+		int i=0;
+		int j=0;
+		int z=from;
+		while(i<(mid-from+1)||(j<(to-mid))){
+			if(i==mid-from+1){
+				A[z]=right[j];
+				j++;
+			}
+			else if (j==to-mid){
+				A[z]=left[i];
+				i++;
+			}
+			else{
+			if(left[i]<right[j]){
+				A[z]=left[i];
+				i++;
+			}
+			else{
+				A[z]=right[j];
+				j++;
+				count++;
+			}
+			}
+			z++;
+		}
+		
+		return count;
+	}
+
+}

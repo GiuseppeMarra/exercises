@@ -32,6 +32,7 @@ public class MergeSort {
 		for(int i=0; i<mid-first+1; i++){
 			left[i]=array[i+first];
 		}
+		
 		left[mid-first+1]=Integer.MAX_VALUE;
 		
 		Integer[] right = new Integer[last-mid+1];

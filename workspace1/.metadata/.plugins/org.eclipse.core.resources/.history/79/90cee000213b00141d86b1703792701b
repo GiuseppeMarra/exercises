@@ -1,0 +1,37 @@
+
+public class BruteForceApproach {
+	
+	
+	public static void main(String[] args){
+		
+		int n = 8;
+		int[] A = new int[n];
+//		for(int i=0; i<n;i++){
+//			A[i]= (int) (Math.random()*100);
+//			System.out.print(A[i]+", ");
+//		}
+		
+		A[0]=3;
+		A[1]=1;
+		A[2]=7;
+	    A[3]=6;
+	    A[4]=2;
+	    A[5]=4;
+	    A[6]=5;
+	    A[7]=8;
+		
+		
+		int count=0;
+		for(int i=0; i<A.length;i++){
+			for(int j=i+1;j<A.length;j++){
+				if (A[i]>A[j])
+					count++;
+			}
+		}
+		System.out.println();
+		System.out.println(count);
+		
+		
+	}
+
+}
